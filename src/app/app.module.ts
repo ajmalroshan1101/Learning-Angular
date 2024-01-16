@@ -15,6 +15,7 @@ import { OperatorComponent } from './Common/RXJS/operators.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomServive } from './service/custom.service';
 import { TestComponent } from './Common/Test/test.component';
+import { ObserComponent } from './Common/Observables/obser.component';
 
 
 
@@ -27,7 +28,8 @@ import { TestComponent } from './Common/Test/test.component';
     ViewChildComponent,
     OndestoryComponent,
     OperatorComponent,
-    TestComponent
+    TestComponent,
+    ObserComponent
     
   ],
   imports: [
