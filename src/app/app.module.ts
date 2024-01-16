@@ -11,6 +11,10 @@ import { customModule } from './Modules/custom.module';
 import { ViewChildComponent } from './viewChild/viewChild.component';
 import { OndestoryComponent } from './Common/onDestory/ondestory.component';
 import { FormsModule } from '@angular/forms';
+import { OperatorComponent } from './Common/RXJS/operators.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomServive } from './service/custom.service';
+import { TestComponent } from './Common/Test/test.component';
 
 
 
@@ -21,17 +25,20 @@ import { FormsModule } from '@angular/forms';
     customdirevtive,
     Lengthcheckpipe,
     ViewChildComponent,
-    OndestoryComponent
+    OndestoryComponent,
+    OperatorComponent,
+    TestComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     customModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [CustomServive],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,13 @@
+<p>Operators</p>
+<p>graph1: {{variable1[0]}}</p>
+<p>graph1: {{variable1[1]}}</p>
+<p>graph1: {{variable1[2]}}</p>
+<button (click)="loadData()">Load Data</button>
+<div *ngIf="data">
+  <h2>Data:</h2>
+  <p>{{ data }}</p>
+</div>
+<div *ngIf="error">
+  <h2>Error:</h2>
+  <p>{{ error }}</p>
+</div>
