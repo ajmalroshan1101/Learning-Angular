@@ -10,6 +10,7 @@ export class AppComponent implements AfterViewInit{
   
   title:string="show timer";
   childshow:boolean=false;
+  selectedItem!:any;
 
   @ViewChild(ViewChildComponent)
  private Childcomponent=ViewChildComponent;
@@ -21,6 +22,13 @@ export class AppComponent implements AfterViewInit{
     this.title=this.childshow===true?'Hide Timer':'show Timer'
   }
 
+  onselecteditem(item: any) {
+    console.log(item);
+    
+    this.selectedItem = item.name;
+    
+
+  }
 
   ngAfterViewInit(): void {
 

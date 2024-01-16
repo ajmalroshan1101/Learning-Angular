@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomServive } from './service/custom.service';
 import { TestComponent } from './Common/Test/test.component';
 import { ObserComponent } from './Common/Observables/obser.component';
+import { ChildComponent } from './Common/ChildComponets/child.component';
 
 
 
@@ -29,7 +30,8 @@ import { ObserComponent } from './Common/Observables/obser.component';
     OndestoryComponent,
     OperatorComponent,
     TestComponent,
-    ObserComponent
+    ObserComponent,
+    ChildComponent
     
   ],
   imports: [

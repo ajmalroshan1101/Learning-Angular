@@ -9,4 +9,7 @@
 
 <!-- <app-operators></app-operators> -->
 
-<app-test></app-test>
+<!-- <app-test></app-test> -->
+
+<app-childco (selecteditem)="onselecteditem($event)"></app-childco>
+<p>Selected item: {{ selectedItem }}</p>
