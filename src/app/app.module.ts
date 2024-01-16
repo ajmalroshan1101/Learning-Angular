@@ -9,6 +9,8 @@ import { Lengthcheckpipe } from './Custompipes/lenghtpipe.pipe';
 import { Hostlisting } from './publicdirective/Hostlisting';
 import { customModule } from './Modules/custom.module';
 import { ViewChildComponent } from './viewChild/viewChild.component';
+import { OndestoryComponent } from './Common/onDestory/ondestory.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,13 +20,16 @@ import { ViewChildComponent } from './viewChild/viewChild.component';
     HeaderComponent,
     customdirevtive,
     Lengthcheckpipe,
-    ViewChildComponent
+    ViewChildComponent,
+    OndestoryComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    customModule
+    customModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
