@@ -4,6 +4,7 @@ import { RouterModule,Routes } from "@angular/router";
 import { TestComponent } from "../Common/Test/test.component";
 import { HeaderComponent } from "../header/header.component";
 import { RoutingChildComponent } from "../Common/routingcomponent/routingchild.component";
+import { CustomGuard } from "../Guards/custom.guard";
 
 const routes:Routes = [
 
@@ -13,7 +14,8 @@ const routes:Routes = [
     },
     {
         path:'testcompo',
-        component:TestComponent
+        component:TestComponent,
+        canActivate:[CustomGuard]
     },
     {
         path:'headcompo',

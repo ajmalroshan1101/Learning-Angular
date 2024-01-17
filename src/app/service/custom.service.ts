@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { Subject } from "rxjs";
+import { CanActivateFn} from "@angular/router";
 
 @Injectable()
 
-export class CustomServive {
+export class CustomServive{
 
 constructor(){}
-
     private Mysubject = new Subject<any>();
 
     shareData$ = this.Mysubject.asObservable();
