@@ -1,5 +1,5 @@
 
-<!-- <app-header [childMsg]="parentMessage"></app-header> -->
+<!-- <app-header ></app-header> -->
 <!-- <app-view-chlid></app-view-chlid>
 
 <button (click)="triggerChildMethod()">Invoke Child Method</button>
@@ -11,5 +11,7 @@
 
 <!-- <app-test></app-test> -->
 
-<app-childco (selecteditem)="onselecteditem($event)"></app-childco>
-<p>Selected item: {{ selectedItem }}</p>
+<!-- <app-childco (selecteditem)="onselecteditem($event)"></app-childco> -->
+<!-- <p>Selected item: {{ selectedItem }}</p> -->
+
+<router-outlet></router-outlet>

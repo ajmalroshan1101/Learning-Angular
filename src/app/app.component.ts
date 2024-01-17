@@ -32,7 +32,7 @@ export class AppComponent implements AfterViewInit{
 
   ngAfterViewInit(): void {
 
-    console.log('child componenr reference',this.Childcomponent);
+    console.log('child component reference',this.Childcomponent);
     
   }
 

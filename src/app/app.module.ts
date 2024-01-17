@@ -17,6 +17,8 @@ import { CustomServive } from './service/custom.service';
 import { TestComponent } from './Common/Test/test.component';
 import { ObserComponent } from './Common/Observables/obser.component';
 import { ChildComponent } from './Common/ChildComponets/child.component';
+import { CustomRoutingModule } from './Router/custom-routing.module';
+import { RoutingChildComponent } from './Common/routingcomponent/routingchild.component';
 
 
 
@@ -31,7 +33,8 @@ import { ChildComponent } from './Common/ChildComponets/child.component';
     OperatorComponent,
     TestComponent,
     ObserComponent,
-    ChildComponent
+    ChildComponent,
+    RoutingChildComponent
     
   ],
   imports: [
@@ -39,7 +42,8 @@ import { ChildComponent } from './Common/ChildComponets/child.component';
     AppRoutingModule,
     customModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CustomRoutingModule
 
   ],
   providers: [CustomServive],

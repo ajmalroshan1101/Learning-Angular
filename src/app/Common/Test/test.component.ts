@@ -21,4 +21,7 @@ showData:number=0;
 
  }
 
+ sendData(){
+    this.Dataservice.sendData({message:'hello from childco component'})
+ }
 }
