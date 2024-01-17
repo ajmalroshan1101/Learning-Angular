@@ -18,7 +18,19 @@ const routes:Routes = [
     {
         path:'headcompo',
         component:HeaderComponent
-    }
+    },
+    // Child route example (it is just an example not used in th application )
+    // {
+    //     path: 'products',
+    //     component: ProductsComponent, // Parent component
+    //     children: [
+    //       { path: '', redirectTo: 'all', pathMatch: 'full' }, // Redirect to 'all' child route by default
+    //       { path: 'all', component: AllProductsComponent }, // Child route for all products
+    //       { path: 'electronics', component: ElectronicsComponent }, // Child route for electronics category
+    //       { path: 'apparel', component: ApparelComponent }, // Child route for apparel category
+    //       { path: ':category', component: CategoryComponent } // Dynamic child route for any category
+    //     ]
+    //   },
 ]
 
 @NgModule({
