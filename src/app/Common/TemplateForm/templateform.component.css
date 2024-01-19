@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    
+}
+
+small{
+    font-weight: bold;
+    color: red;
+}
+
+.form-cls{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+input{
+    padding: 5px;
+}

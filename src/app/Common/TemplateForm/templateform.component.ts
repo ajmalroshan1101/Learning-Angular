@@ -4,6 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-templateform',
   templateUrl: './templateform.component.html',
+  styleUrls:['./templateform.component.css']
 })
 export class TemplateComponentone {
   @ViewChild('registretion') from!: NgForm;

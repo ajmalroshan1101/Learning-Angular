@@ -1,6 +1,8 @@
-<h1>Template Form</h1>
+<body>
+    <h1>Template Form</h1>
+    
 
-<form (ngSubmit)="OnSubmitForm()" #registretion="ngForm">
+<form (ngSubmit)="OnSubmitForm()" #registretion="ngForm" class="form-cls">
   <h2>User Registration</h2>
 
   <label for="username">Username:</label>
@@ -11,7 +13,15 @@
     placeholder="Enter your username"
     ngModel
     required
+    #fname="ngModel"
   />
+
+  <small 
+  *ngIf="fname.invalid&&fname.touched"
+  > 
+    Enter Username 
+
+  </small>
 
   <label for="email">Email:</label>
   <input
@@ -20,8 +30,18 @@
     name="email"
     placeholder="Enter your email"
     ngModel
-    required email
+    required
+    email
+
+    #email="ngModel"
   />
+
+  <small 
+  *ngIf="email.invalid&&email.touched"
+  > 
+    Enter Email
+
+  </small>
 
   <label for="password">Password:</label>
   <input
@@ -32,8 +52,15 @@
     required
     ngModel
     required
+    #pass="ngModel"
   />
 
+  <small 
+  *ngIf="pass.invalid&&pass.touched"
+  > 
+    Enter the password 
+
+  </small>
   <input
     type="submit"
     name=""
@@ -42,3 +69,5 @@
     [disabled]="!registretion.valid"
   />
 </form>
+
+</body>
