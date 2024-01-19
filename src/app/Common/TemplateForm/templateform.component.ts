@@ -1,19 +1,18 @@
-import { Component, ViewChild } from "@angular/core";
-import { NgForm } from "@angular/forms";
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
-    selector:'app-templateform',
-    templateUrl:'./templateform.component.html'
+  selector: 'app-templateform',
+  templateUrl: './templateform.component.html',
 })
+export class TemplateComponentone {
+  @ViewChild('registretion') from!: NgForm;
 
-export class TemplateComponentone{
+  OnSubmitForm() {
+    console.log(this.from);
 
-    @ViewChild('registretion') from!:NgForm;
+    const { username, email, password } = this.from.value;
 
-    OnSubmitForm(){
-
-        console.log(this.from);
-        
-    }
-
+    console.log(username, email, password);
+  }
 }
