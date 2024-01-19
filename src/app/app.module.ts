@@ -10,7 +10,7 @@ import { Hostlisting } from './publicdirective/Hostlisting';
 import { customModule } from './Modules/custom.module';
 import { ViewChildComponent } from './viewChild/viewChild.component';
 import { OndestoryComponent } from './Common/onDestory/ondestory.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OperatorComponent } from './Common/RXJS/operators.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CustomServive } from './service/custom.service';
@@ -19,6 +19,8 @@ import { ObserComponent } from './Common/Observables/obser.component';
 import { ChildComponent } from './Common/ChildComponets/child.component';
 import { CustomRoutingModule } from './Router/custom-routing.module';
 import { RoutingChildComponent } from './Common/routingcomponent/routingchild.component';
+import { ReactiveFormComponent } from './Common/ReactiveForm/reactiveform.component';
+import { TemplateComponentone } from './Common/TemplateForm/templateform.component';
 
 
 
@@ -34,8 +36,9 @@ import { RoutingChildComponent } from './Common/routingcomponent/routingchild.co
     TestComponent,
     ObserComponent,
     ChildComponent,
-    RoutingChildComponent
-    
+    RoutingChildComponent,
+    ReactiveFormComponent,
+    TemplateComponentone
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { RoutingChildComponent } from './Common/routingcomponent/routingchild.co
     customModule,
     FormsModule,
     HttpClientModule,
-    CustomRoutingModule
+    CustomRoutingModule,
+    ReactiveFormsModule,
 
   ],
   providers: [CustomServive],

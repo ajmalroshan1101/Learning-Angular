@@ -1,0 +1,40 @@
+<h1>reactive form</h1>
+
+<form [formGroup]="FMbuilder"
+  (ngSubmit)="submitForm()"
+>
+  <h2>User Registration</h2>
+
+  <label for="username">Username:</label>
+  <input
+    type="text"
+    id="username"
+    name="username"
+    placeholder="Enter your username"
+   
+    formControlName="username"
+  />
+
+  <label for="email">Email:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="Enter your email"
+  
+    formControlName="email"
+  />
+
+  <label for="password">Password:</label>
+  <input
+    type="password"
+    id="password"
+    name="password"
+    placeholder="Enter your password"
+
+    formControlName="password"
+  />
+
+  <button type="submit" value="submit">Register</button>
+
+</form>
