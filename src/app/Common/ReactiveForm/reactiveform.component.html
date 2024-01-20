@@ -1,8 +1,9 @@
+<body>
+  
+
 <h1>reactive form</h1>
 
-<form [formGroup]="FMbuilder"
-  (ngSubmit)="submitForm()"
->
+<form [formGroup]="FMbuilder" (ngSubmit)="submitForm()" class="form-cls">
   <h2>User Registration</h2>
 
   <label for="username">Username:</label>
@@ -11,9 +12,17 @@
     id="username"
     name="username"
     placeholder="Enter your username"
-   
     formControlName="username"
   />
+
+  <!-- Here FMbuilder is can accesss username form control -->
+  <small
+    *ngIf="
+      FMbuilder.get('username')?.invalid && 
+      FMbuilder.get('username')?.touched"
+  >
+    Username must be added in the form
+  </small>
 
   <label for="email">Email:</label>
   <input
@@ -21,9 +30,16 @@
     id="email"
     name="email"
     placeholder="Enter your email"
-  
     formControlName="email"
   />
+
+  <small
+    *ngIf="
+      FMbuilder.get('email')?.invalid && 
+      FMbuilder.get('email')?.touched"
+  >
+    email must be added in the form
+  </small>
 
   <label for="password">Password:</label>
   <input
@@ -31,10 +47,18 @@
     id="password"
     name="password"
     placeholder="Enter your password"
-
     formControlName="password"
   />
 
-  <button type="submit" value="submit">Register</button>
+  <small
+  *ngIf="
+    FMbuilder.get('password')?.invalid && 
+    FMbuilder.get('password')?.touched"
+  >
+  password must be added in the form
+  </small>
 
+  <button type="submit" value="submit"[disabled]="!FMbuilder.valid">Register</button>
 </form>
+
+</body>
