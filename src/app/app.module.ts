@@ -21,6 +21,8 @@ import { CustomRoutingModule } from './Router/custom-routing.module';
 import { RoutingChildComponent } from './Common/routingcomponent/routingchild.component';
 import { ReactiveFormComponent } from './Common/ReactiveForm/reactiveform.component';
 import { TemplateComponentone } from './Common/TemplateForm/templateform.component';
+import { HttpService } from './service/http-service.service';
+import { GetComponent } from './Common/HttpMethods/get.component';
 
 
 
@@ -38,7 +40,8 @@ import { TemplateComponentone } from './Common/TemplateForm/templateform.compone
     ChildComponent,
     RoutingChildComponent,
     ReactiveFormComponent,
-    TemplateComponentone
+    TemplateComponentone,
+    GetComponent
   ],
   imports: [
     BrowserModule,
@@ -48,9 +51,10 @@ import { TemplateComponentone } from './Common/TemplateForm/templateform.compone
     HttpClientModule,
     CustomRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule
 
   ],
-  providers: [CustomServive],
+  providers: [CustomServive,HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

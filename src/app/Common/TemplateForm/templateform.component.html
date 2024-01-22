@@ -5,11 +5,13 @@
 <form (ngSubmit)="OnSubmitForm()" #registretion="ngForm" class="form-cls">
   <h2>User Registration</h2>
 
+  <!-- name is must in input other wise angular can't able to understand -->
   <label for="username">Username:</label>
   <input
     type="text"
     id="username"
-    name="username"
+    
+    name="username" 
     placeholder="Enter your username"
     ngModel
     required
