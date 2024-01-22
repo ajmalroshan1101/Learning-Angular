@@ -17,7 +17,7 @@ export class GetComponent implements OnInit {
 
  ngOnInit(): void {
      
-
+ this.showData();
 
  }
  
@@ -38,8 +38,21 @@ export class GetComponent implements OnInit {
         this.comserv.postData({name}).subscribe((res)=>{
             console.log("data"+res);
             this.showData();
+
+            
         })
        }
        
+    }
+
+    deletebtn(id:string){
+
+        console.log(id);
+        
+        //Here the id is sending to service for deleting item from the database
+        this.comserv.DeleteData(id);
+
+        this.showData();
+
     }
 }

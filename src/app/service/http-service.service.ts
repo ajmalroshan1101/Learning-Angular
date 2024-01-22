@@ -36,4 +36,15 @@ export class HttpService {
         return this.http.post<{name:string}>(this.apiurl,postData)
 
     }
+
+    DeleteData(id:string){
+
+        console.log("server "+id);
+        
+        this.http.delete('https://httpmethods-b71d7-default-rtdb.firebaseio.com/task/'+id+'.json')
+        .subscribe((res)=>{
+            console.log('deleted');
+            
+        });
+    }
 }
