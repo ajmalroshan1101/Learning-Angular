@@ -12,12 +12,12 @@ export class HttpService {
 
     }
 
+    // GET request
     getData(){
 
    return  this.http.get<{[key:string]:get}>(this.apiurl)
      .pipe(map((res)=>{
         // Transform the Data
-        console.log(res);
          
         let task=[];
         for (let key in res){
@@ -31,12 +31,14 @@ export class HttpService {
 
     }
 
+    // POST Request
     postData(postData:any):Observable<any>{
 
         return this.http.post<{name:string}>(this.apiurl,postData)
 
     }
 
+    // DELETE Request
     DeleteData(id:string){
 
         console.log("server "+id);
@@ -46,5 +48,12 @@ export class HttpService {
             console.log('deleted');
             
         });
+    }
+
+    //PUT Request
+    UpdateData(id:string,value:get){
+
+        this.http.put('https://httpmethods-b71d7-default-rtdb.firebaseio.com/task/'+id+'.json',value)
+        .subscribe();
     }
 }

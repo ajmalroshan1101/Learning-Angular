@@ -5,7 +5,7 @@
 
     <input type="text" ngModel required name="text" > 
 
-    <input type="submit" value="submit">
+    <input type="submit" value="{{Editmode?'Update':'submit'}}">
 </form>
 
 
@@ -13,5 +13,7 @@
     <li *ngFor="let item of data">{{ item.name }}
     
         <button (click)="deletebtn(item.id)">Delete</button>
+
+        <button (click)="Updatebtn(item.id)">Update</button>
     </li>
   </ul>
